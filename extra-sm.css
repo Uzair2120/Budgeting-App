@@ -1,13 +1,17 @@
 @media screen and (max-width:576px){
     .balance-content span {
         font-family: 'Bebas Neue' , sans-serif;
-        font-size: 46px;
+        font-size: 42px;
     }
     
     .balance-content p {
         font-family: 'Poppins' , sans-serif;
-        font-size: 21px;
+        font-size: 20px;
         margin-bottom: 0px;
+    }
+
+    #tbudget-form h3{
+        font-size: 19px;
     }
 
     .budget{
@@ -25,6 +29,10 @@
     
     .details{
         padding: 40px 10px;
+    }
+
+    .btn{
+    font-size: 14px;
     }
 
     .forms{

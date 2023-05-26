@@ -135,12 +135,16 @@
     height: 100%;
 }
 
-#tbudget-form h3{
+.forms h3, h4{
     font-family: 'Public Sans' , sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 22px;
     margin: 0;
+}
+
+.forms h4{
+    margin-bottom: 15px;
 }
 
 #tbudget-form input{
