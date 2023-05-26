@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bentham&family=Catamaran:wght@200;300;400;500;600;700&family=DM+Sans:wght@400;500;700&family=Dancing+Script:wght@400;500;600&family=Jost:wght@200;300;400;500;600;700&family=Maven+Pro:wght@400;500;600&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=PT+Sans:wght@400;700&family=Passions+Conflict&family=Poppins:wght@100;200;300;400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#whole{
+    /* background: url("./images/Untitled\ design\ \(7\).png"); */
+    height: 100%;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    background-color: #EFEFEF;
+}
+
+.header {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.logo img{
+    width: 180px;
+}
+
+.main-section1{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+
+.budget-balance {
+    /* border: 2px solid blue; */
+    height: 100%;
+    width: 100%;
+    padding: 20px 40px;
+    justify-content: center;
+}
+
+.bu-ba-ex{
+    /* border: 2px solid green; */
+    height: 100%;
+    padding: 0;
+}
+
+.budget{
+    padding-right: 15px;
+}
+
+.exppense{
+    padding: 0px 15px;
+}
+
+.balance{
+    padding-left: 15px;
+}
+
+.for-content1{
+    background-color: #FB9C48;
+    border: 2px solid #f17c16;
+    border-radius: 20px;
+}
+
+.for-content2{
+    background-color: #9388BB;
+    border: 2px solid #6756a3;
+    border-radius: 20px;
+}
+
+.for-content3{
+    background-color: #FF5955;
+    border: 2px solid #f32623;
+    border-radius: 20px;
+}
+
+.balance-content {
+    height: 100%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.balance-content p{
+    font-family: 'Poppins' , sans-serif;
+    font-size: 32px;
+    margin-bottom: 0px;
+}
+
+.balance-content span{
+    font-family: 'Bebas Neue' , sans-serif;
+    font-size: 70px;
+}
+
+
+
+
+.main-section2{
+    /* border: 2px solid red; */
+}
+
+.budgeting{
+    /* border: 2px solid blue; */
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.details{
+    /* border: 2px solid green; */
+    padding: 40px;
+}
+
+
+.tbudget-content{
+    /* border: 2px solid yellowgreen; */
+    display: flex;
+    justify-content: center;
+    
+}
+
+.forms{
+    background-color: #F8FAFC;
+    padding: 30px 50px;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    border-top: 10px solid #36454f;
+    height: 100%;
+}
+
+.forms h3, h4{
+    font-family: 'Public Sans' , sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0;
+}
+
+.forms h4{
+    margin-bottom: 15px;
+}
+
+#tbudget-form input{
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #dfdfdf;
+    outline: none;
+    padding: 0px 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Poppins' , sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.forms input{
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #dfdfdf;
+    outline: none;
+    padding: 0px 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: 'Poppins' , sans-serif;
+    font-size: 16px;
+}
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.forms p {
+    margin: 0;
+    font-family: 'Public Sans' , sans-serif;
+    font-weight: 600;
+}
+
+.forms input:focus{
+    border: 1px solid #36454f;
+    outline: none;
+}
+
+.btn{
+    padding: 8px 20px;
+    font-family: 'Montserrat' , sans-serif;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #36454f;
+    border-radius: 5px;
+    transition: all .3s;
+    /* float: right; */
+    display: block;
+}
+
+.btn:hover{
+    background-color: #4d5458;
+    color: white;
+}
+
+
+

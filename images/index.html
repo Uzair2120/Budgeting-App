@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./extra-lg.css">
+    <link rel="stylesheet" href="./lg.css">
+    <link rel="stylesheet" href="./medium.css">
+    <link rel="stylesheet" href="./small.css">
+    <link rel="stylesheet" href="./extra-sm.css">
+    <title>Budgeting App</title>
+</head>
+
+<body>
+    <section id="whole">
+        <header class="header">
+            <div class="logo">
+                <img src="./images/best Budgeting app (1).png" alt="">
+            </div>
+        </header>
+
+        <main class="main-section1">
+            <div class="row budget-balance">
+                <div class="col-sm-4 col-12 bu-ba-ex budget">
+                    <div class="for-content1">
+                        <div class="balance-content">
+                            <p>Budget</p>
+                            <span id="show_budget">$1892</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-6 bu-ba-ex expense">
+                    <div class="for-content2">
+                        <div class="balance-content">
+                            <p>Expenses</p>
+                            <span id="show_expense">$1892</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-6 bu-ba-ex balance">
+                    <div class="for-content3">
+                        <div class="balance-content">
+                            <p>Balance</p>
+                            <span id="show_balance">$1892</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <main class="main-section2">
+            <div class="row budgeting">
+                <div class="col-md-6 details tbudget">
+                    <div class="tbudget-content">
+                        <form action="" id="tbudget-form" class="forms">
+                            <h3>Enter your budget</h3>
+                            <input type="number" id="total-budget">
+                            <button id="sumbit-total-budget" class="btn">Add Budget</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 details allexpense">
+                    <div class="expense-content">
+                        <form action="" id="expense-form" class="forms">
+                            <h4>Enter your expense</h4>
+                            <p>Expense Name:</p>
+                            <input type="text" id="expense-name">
+                            <p>Expense Amount:</p>
+                            <input type="number" id="expense-name">
+                            <p>Category:</p>
+                            <input type="text" id="expense-name">
+                            <p>Date:</p>
+                            <input type="date" id="expense-name">
+                            <button form="expense-form" id="submit-expense" class="btn">Add Expense</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+    </section>
+
+    <script src="https://kit.fontawesome.com/3e4520222c.js" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
