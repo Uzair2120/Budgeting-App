@@ -1,11 +1,11 @@
 @media screen and (min-width:992px) and (max-width:1199px) {
     .balance-content .amm {
-        font-family: 'Bebas Neue' , sans-serif;
-        font-size: 56px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 50px;
     }
-    
+
     .balance-content p {
-        font-family: 'Poppins' , sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-size: 24px;
         margin-bottom: 0px;
     }
@@ -14,34 +14,34 @@
         height: 170px;
         width: 170px;
     }
-    
+
     .progress-circle::after {
         height: 140px;
         width: 140px;
     }
-    
+
     .progress-circle2 {
         height: 170px;
         width: 170px;
     }
-    
+
     .progress-circle2::after {
         height: 140px;
         width: 140px;
     }
-    
+
     .percentage-value {
         position: relative;
         font-size: 28px;
     }
-    
+
     .percentage-value2 {
         position: relative;
         font-size: 28px;
     }
 
-    .with-head h3{
+    .with-head h3 {
         font-size: 24px;
     }
-    
+
 }

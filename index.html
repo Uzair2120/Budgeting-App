@@ -12,19 +12,22 @@
     <link rel="stylesheet" href="./medium.css">
     <link rel="stylesheet" href="./small.css">
     <link rel="stylesheet" href="./extra-sm.css">
-    
+
 
     <title>Budgeting App</title>
 </head>
 
 <body>
     <section id="whole">
+        <!-- header starts here  -->
         <header class="header">
             <div class="logo">
                 <img src="./images/best Budgeting app (1).png" alt="">
             </div>
         </header>
+        <!-- header ends here  -->
 
+        <!-- section number 1 starts here  -->
         <main class="main-section1">
             <div class="row budget-balance">
                 <div class="col-sm-4 col-12 bu-ba-ex budget">
@@ -53,10 +56,9 @@
                 </div>
             </div>
         </main>
+        <!-- section number 1 ends here  -->
 
-
-
-
+        <!-- section number 2 starts here  -->
         <main class="main-section2">
             <div class="row budgeting">
                 <div class="col-md-6 details tbudget">
@@ -78,21 +80,26 @@
 
 
                     <div class="tbudget-content">
+                        <!-- budget form starts here  -->
                         <form action="#" id="tbudget-form" class="forms" onsubmit="addBudget()">
                             <h3>Enter your budget</h3>
                             <div class="budget-with-error">
                                 <input type="number" id="total-budget" class="uv">
                                 <li class="error">Value cannot be <b>empty,</b> <b>negtive</b> or <b>zero</b></li>
                             </div>
+                            <!-- budget submit button  -->
                             <button id="sumbit-total-budget" class="btn">Add Budget</button>
                         </form>
+                        <!-- budget form ends here  -->
                     </div>
                 </div>
+
                 <div class="col-md-6 details allexpense">
                     <div class="expense-content">
+                        <!-- expenses form starts here  -->
                         <form action="#" id="expense-form" class="forms" onsubmit="addExpense()">
                             <h4>Enter your expense</h4>
-                            <p>Description:</p>
+                            <p>Expense Name:</p>
                             <div class="budget-with-error">
                                 <input type="text" id="expense-name" class="uv">
                                 <li class="error">Value cannot be <b>empty</b> or contain <b>numbers</b></li>
@@ -126,20 +133,25 @@
                                 <input type="date" id="expense-date" class="uv">
                                 <li class="error">Value cannot be <b>unselected</b></li>
                             </div>
+                            <!-- expense submit button  -->
                             <button form="expense-form" id="submit-expense" class="btn">Add Expense</button>
                         </form>
+                        <!-- expenses form ends here  -->
                     </div>
                 </div>
             </div>
         </main>
+        <!-- section number 2 ends here  -->
 
 
+        <!-- section number 3 starts here  -->
         <main class="main-section3" id="toprint">
             <div class="expense-feedback">
+                <!-- table starts here  -->
                 <table id="table">
                     <thead>
                         <tr>
-                            <th class="expense-title">Description</th>
+                            <th class="expense-title">Expense Name</th>
                             <th class="expense-value">Amount</th>
                             <th class="expense-category">Category</th>
                             <th class="expense-date">Date</th>
@@ -148,28 +160,30 @@
                     </thead>
                     <tbody></tbody>
                 </table>
+                <!-- table ends here  -->
 
+                <!-- template to clone  -->
                 <template id="expense-row">
                     <tr>
-                        <td class="expense-date"></td>
                         <td class="expense-title"></td>
                         <td class="expense-value"></td>
                         <td class="expense-category"></td>
+                        <td class="expense-date"></td>
                         <td class="delete-edit">
                             <i class="fa-solid fa-pen-to-square editRow"></i>
                             <i class="fa-solid fa-circle-xmark deleteRow"></i>
                         </td>
                     </tr>
                 </template>
-
             </div>
         </main>
 
+        <!-- report button  -->
         <div class="report">
-        <button id="print" class="btn">Get report</button>
+            <button id="print" class="btn">Get report</button>
         </div>
-
     </section>
+    <!-- section number 3 ends here  -->
 
     <script src="https://kit.fontawesome.com/3e4520222c.js" crossorigin="anonymous"></script>
     <script src="./app.js"></script>

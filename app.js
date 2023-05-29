@@ -22,16 +22,16 @@ class myBudgetApp {
         this.clone;
         this.start = 0;
         this.start2 = 0;
-
-        
-        
     }
 
+    // for budget used progress 
     forUsed() {
         if (this.start < this.percentage) {
             this.start++;
             progressEND(this.percentage, this.progressCircular)
-        } else {
+        }
+
+        else {
             this.start--;
             progressEND(this.percentage, this.progressCircular)
         }
@@ -41,12 +41,14 @@ class myBudgetApp {
         }
     }
 
-
+    // for remaining budget progress 
     forRemaining() {
         if (this.start2 < this.percentage2) {
             this.start2++;
             progressEND(this.percentage2, this.progressCircular2)
-        } else {
+        }
+
+        else {
             this.start--;
             progressEND(this.percentage2, this.progressCircular2)
         }
@@ -55,10 +57,11 @@ class myBudgetApp {
             circle2.style.background = `conic-gradient(#FF5955 ${per2 * 3.6}deg, #ededed 0deg)`;
         }
     }
- 
 
+    // for adding budget 
     addBudget(e) {
         e.preventDefault();
+        // for error handling of budget feild
         if (this.budgetAmount.value === "" || this.budgetAmount.value === NaN || this.budgetAmount.value <= "0") {
             this.error[0].classList.add('error-show');
             this.budgetAmount.classList.add('input-error');
@@ -66,7 +69,9 @@ class myBudgetApp {
                 this.error[0].classList.remove('error-show');
                 this.budgetAmount.classList.remove('input-error');
             }, 3000);
-        } else {
+        }
+
+        else {
             this.showBudget.innerText = +this.budgetAmount.value;
             this.showBalance.innerText = +this.budgetAmount.value - +this.showExpenses.innerText;
             this.percentage = Math.ceil((+this.showExpenses.innerText / +this.showBudget.innerText) * 100);
@@ -79,8 +84,10 @@ class myBudgetApp {
         }
     }
 
+    // for adding expense 
     addExpense(e) {
         e.preventDefault();
+        // for error handling of expense name feild
         if (this.expenseName.value === '' || /\d/.test(this.expenseName.value)) {
             this.error[1].classList.add('error-show');
             this.expenseName.classList.add('input-error');
@@ -89,6 +96,8 @@ class myBudgetApp {
                 this.expenseName.classList.remove('input-error');
             }, 3000);
         }
+
+        // for error handling of expense amount feild
         else if (+this.expenseAmount.value <= 0 || this.expenseAmount.value === NaN || this.expenseAmount.value === "") {
             this.error[2].classList.add('error-show');
             this.expenseAmount.classList.add('input-error');
@@ -97,7 +106,9 @@ class myBudgetApp {
                 this.expenseAmount.classList.remove('input-error');
             }, 3000);
         }
-        else if(this.expenseCategory.value == "--Select"){
+
+        // for error handling of expense category feild
+        else if (this.expenseCategory.value == "--Select" || this.expenseCategory.value === "") {
             this.error[3].classList.add('error-show');
             this.expenseCategory.classList.add('input-error');
             setTimeout(() => {
@@ -105,7 +116,9 @@ class myBudgetApp {
                 this.expenseCategory.classList.remove('input-error');
             }, 3000);
         }
-        else if(this.expenseDate.value === ""){
+
+        // for error handling of expense date feild
+        else if (this.expenseDate.value === "") {
             this.error[4].classList.add('error-show');
             this.expenseDate.classList.add('input-error');
             setTimeout(() => {
@@ -113,7 +126,7 @@ class myBudgetApp {
                 this.expenseDate.classList.remove('input-error');
             }, 3000);
         }
-        
+
         else {
             this.clone = this.template.content.cloneNode(true);
             let td = this.clone.querySelectorAll('td');
@@ -122,14 +135,12 @@ class myBudgetApp {
             td[2].innerText = this.expenseCategory.value;
             td[3].innerText = this.expenseDate.value;
             this.tbody.appendChild(this.clone);
-
             this.showExpenses.innerText = +this.showExpenses.innerText + +this.expenseAmount.value;
             this.showBalance.innerText = +this.showBalance.innerText - +this.expenseAmount.value;
             this.percentage = Math.ceil((+this.showExpenses.innerText / +this.showBudget.innerText) * 100);
             this.percentageValue.textContent = `${this.percentage}%`;
             this.percentage2 = Math.floor((+this.showBalance.innerText / +this.showBudget.innerText) * 100);
             this.percentageValue2.textContent = `${this.percentage2}%`;
-
             this.expenseName.value = '';
             this.expenseAmount.value = '';
             this.expenseCategory.value = '';
@@ -138,6 +149,8 @@ class myBudgetApp {
             this.forRemaining()
         }
     }
+
+    // for deleting expense
     deleteExpense(e) {
         if (e.target.classList.contains('deleteRow')) {
             this.showBalance.innerText = +this.showBalance.innerText + +e.target.closest('tr').children[1].innerText;
@@ -152,6 +165,7 @@ class myBudgetApp {
         }
     }
 
+    // for editing expense 
     editExpenses(e) {
         if (e.target.classList.contains('editRow')) {
             this.showBalance.innerText = +this.showBalance.innerText + +e.target.closest('tr').children[1].innerText;
@@ -160,7 +174,6 @@ class myBudgetApp {
             this.expenseAmount.value = e.target.closest('tr').children[1].innerText;
             this.expenseCategory.value = e.target.closest('tr').children[2].innerText;
             this.expenseDate.value = e.target.closest('tr').children[3].innerText;
-
             this.percentage = Math.ceil((+this.showExpenses.innerText / +this.showBudget.innerText) * 100);
             this.percentageValue.textContent = `${this.percentage}%`;
             this.percentage2 = Math.floor((+this.showBalance.innerText / +this.showBudget.innerText) * 100);
@@ -171,12 +184,11 @@ class myBudgetApp {
             this.forRemaining()
         }
     }
-
 }
 
-document.addEventListener('DOMContentLoaded' , init)
-
-function init(){
+// above functions work when document is loaded 
+document.addEventListener('DOMContentLoaded', init)
+function init() {
     const add_Budget = document.querySelector('#sumbit-total-budget');
     const add_Expense = document.querySelector('#submit-expense');
     const table = document.querySelector('table');
@@ -184,30 +196,19 @@ function init(){
 }
 
 
+// for getting report 
 const printbnt = document.getElementById("print");
-
-printbnt.addEventListener('click' , () => {
+printbnt.addEventListener('click', () => {
     // print();
     var body = document.body.innerHTML;
+    var table2 = document.querySelector(".delete-edit").innerHTML;
+    table2 ="";
+    console.log(table2)
+    
     var table = document.querySelector(".expense-feedback").innerHTML;
-    // var table2 = document.getElementById("table").innerHTML;
-    // var th = document.getElementsByTagName("th");
-    // var table3 = table2.
     var balance = document.querySelector(".for-content1").innerHTML;
     var balance2 = document.querySelector(".for-content2").innerHTML;
     var balance3 = document.querySelector(".for-content3").innerHTML;
     document.body.innerHTML = balance + balance2 + balance3 + "<br>" + table;
     window.print();
-    // document.body.innerHTML = backup;
-    // print();
 })
-
-
-// function print(){
-//     // var backup = document.body.innerHTML;
-//     // var content = document.getElementById(table).content;
-//     // document.body.innerHTML = content;
-//     // window.print();
-//     // document.body.innerHTML = backup;
-//     print();
-// }
