@@ -1,5 +1,5 @@
 @media screen and (min-width:576px) and (max-width:767px) {
-    .balance-content span {
+    .balance-content .amm {
         font-family: 'Bebas Neue' , sans-serif;
         font-size: 45px;
     }
@@ -33,5 +33,43 @@
     .forms{
         padding: 30px;
     }
+    
+    .main-section3 {
+        padding: 40px 20px;
+    }
 
+
+    .progress-circle {
+        height: 170px;
+        width: 170px;
+    }
+    
+    .progress-circle::after {
+        height: 140px;
+        width: 140px;
+    }
+    
+    .progress-circle2 {
+        height: 170px;
+        width: 170px;
+    }
+    
+    .progress-circle2::after {
+        height: 140px;
+        width: 140px;
+    }
+    
+    .percentage-value {
+        position: relative;
+        font-size: 28px;
+    }
+    
+    .percentage-value2 {
+        position: relative;
+        font-size: 28px;
+    }
+
+    .with-head h3{
+        font-size: 24px;
+    }
 }

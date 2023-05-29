@@ -1,5 +1,5 @@
 @media screen and (max-width:576px){
-    .balance-content span {
+    .balance-content .amm {
         font-family: 'Bebas Neue' , sans-serif;
         font-size: 42px;
     }
@@ -28,7 +28,7 @@
     }
     
     .details{
-        padding: 40px 10px;
+        padding: 30px 10px;
     }
 
     .btn{
@@ -45,6 +45,51 @@
     
     .allexpense{
         padding-top: 20px;
+    }
+
+    .main-section3 {
+        padding: 40px 10px;
+        padding-top: 0;
+    }
+
+
+    .progress-circle {
+        height: 150px;
+        width: 150px;
+    }
+    
+    .progress-circle::after {
+        height: 120px;
+        width: 120px;
+    }
+    
+    .progress-circle2 {
+        height: 150px;
+        width: 150px;
+    }
+    
+    .progress-circle2::after {
+        height: 120px;
+        width: 120px;
+    }
+    
+    .percentage-value {
+        position: relative;
+        font-size: 28px;
+    }
+    
+    .percentage-value2 {
+        position: relative;
+        font-size: 28px;
+    }
+
+    .with-head h3{
+        font-size: 21px;
+    }
+
+    .percentages {
+        width: 100%;
+        padding: 35px 20px;
     }
 
 }

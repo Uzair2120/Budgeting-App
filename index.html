@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./medium.css">
     <link rel="stylesheet" href="./small.css">
     <link rel="stylesheet" href="./extra-sm.css">
+    
+
     <title>Budgeting App</title>
 </head>
 
@@ -29,7 +31,7 @@
                     <div class="for-content1">
                         <div class="balance-content">
                             <p>Budget</p>
-                            <span id="show_budget">$1892</span>
+                            <p class="amm">$ <span id="show_budget">0</span></p>
                         </div>
                     </div>
                 </div>
@@ -37,7 +39,7 @@
                     <div class="for-content2">
                         <div class="balance-content">
                             <p>Expenses</p>
-                            <span id="show_expense">$1892</span>
+                            <p class="amm">$ <span id="show_expense">0</span></p>
                         </div>
                     </div>
                 </div>
@@ -45,36 +47,85 @@
                     <div class="for-content3">
                         <div class="balance-content">
                             <p>Balance</p>
-                            <span id="show_balance">$1892</span>
+                            <p class="amm">$ <span id="show_balance">0</span></p>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
 
+
+
+
         <main class="main-section2">
             <div class="row budgeting">
                 <div class="col-md-6 details tbudget">
+                    <div class="percentages">
+                        <div class="with-head">
+                            <h3 class="used">Budget Used</h3>
+                            <div class="progress-circle">
+                                <span class="percentage-value">0%</span>
+                            </div>
+                        </div>
+
+                        <div class="with-head">
+                            <h3 class="remain">Remaning Budget</h3>
+                            <div class="progress-circle2">
+                                <span class="percentage-value2">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="tbudget-content">
-                        <form action="" id="tbudget-form" class="forms">
+                        <form action="#" id="tbudget-form" class="forms" onsubmit="addBudget()">
                             <h3>Enter your budget</h3>
-                            <input type="number" id="total-budget">
+                            <div class="budget-with-error">
+                                <input type="number" id="total-budget" class="uv">
+                                <li class="error">Value cannot be <b>empty,</b> <b>negtive</b> or <b>zero</b></li>
+                            </div>
                             <button id="sumbit-total-budget" class="btn">Add Budget</button>
                         </form>
                     </div>
                 </div>
                 <div class="col-md-6 details allexpense">
                     <div class="expense-content">
-                        <form action="" id="expense-form" class="forms">
+                        <form action="#" id="expense-form" class="forms" onsubmit="addExpense()">
                             <h4>Enter your expense</h4>
-                            <p>Expense Name:</p>
-                            <input type="text" id="expense-name">
+                            <p>Description:</p>
+                            <div class="budget-with-error">
+                                <input type="text" id="expense-name" class="uv">
+                                <li class="error">Value cannot be <b>empty</b> or contain <b>numbers</b></li>
+                            </div>
                             <p>Expense Amount:</p>
-                            <input type="number" id="expense-name">
+                            <div class="budget-with-error">
+                                <input type="number" id="expense-amount" class="uv">
+                                <li class="error">Value cannot be <b>empty,</b> <b>negtive</b> or <b>zero</b></li>
+                            </div>
                             <p>Category:</p>
-                            <input type="text" id="expense-name">
+                            <div class="budget-with-error">
+                                <select name="categories" id="categories" class="uv">
+                                    <option value="--Select">--Select</option>
+                                    <option value="Housing">Housing</option>
+                                    <option value="Transportation">Transportation</option>
+                                    <option value="Food">Food</option>
+                                    <option value="Utilities">Utilities</option>
+                                    <option value="Insurance ">Insurance </option>
+                                    <option value="Medical & Healthcare ">Medical & Healthcare </option>
+                                    <option value="Saving, Investing, & Debt Payments">Saving, Investing, & Debt
+                                        Payments
+                                    </option>
+                                    <option value="Personal Spending ">Personal Spending </option>
+                                    <option value="Recreation & Entertainment">Recreation & Entertainment</option>
+                                    <option value="Miscellaneous">Miscellaneous</option>
+                                </select>
+                                <li class="error">Value cannot be <b>unselected</b></li>
+                            </div>
                             <p>Date:</p>
-                            <input type="date" id="expense-name">
+                            <div class="budget-with-error">
+                                <input type="date" id="expense-date" class="uv">
+                                <li class="error">Value cannot be <b>unselected</b></li>
+                            </div>
                             <button form="expense-form" id="submit-expense" class="btn">Add Expense</button>
                         </form>
                     </div>
@@ -83,6 +134,40 @@
         </main>
 
 
+        <main class="main-section3" id="toprint">
+            <div class="expense-feedback">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th class="expense-title">Description</th>
+                            <th class="expense-value">Amount</th>
+                            <th class="expense-category">Category</th>
+                            <th class="expense-date">Date</th>
+                            <th class="delete-edit">Edit/Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <template id="expense-row">
+                    <tr>
+                        <td class="expense-date"></td>
+                        <td class="expense-title"></td>
+                        <td class="expense-value"></td>
+                        <td class="expense-category"></td>
+                        <td class="delete-edit">
+                            <i class="fa-solid fa-pen-to-square editRow"></i>
+                            <i class="fa-solid fa-circle-xmark deleteRow"></i>
+                        </td>
+                    </tr>
+                </template>
+
+            </div>
+        </main>
+
+        <div class="report">
+        <button id="print" class="btn">Get report</button>
+        </div>
 
     </section>
 
